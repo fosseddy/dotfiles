@@ -3,3 +3,5 @@
 [user]
 	name = Mark Fosseddy
 	email = markfosseddy@gmail.com
+[init]
+  defaultBranch = master

@@ -3,7 +3,7 @@ Plug 'preservim/nerdtree'
 
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
 Plug 'itchyny/lightline.vim'
 
@@ -27,20 +27,40 @@ let g:lightline = {
 \   }
 \ }
 
-lua require('luasnip').config.set_config({
-\   history = false,
-\   updateevents = 'TextChangedI'
-\ })
+lua << EOF
+require('luasnip').config.set_config({
+  history = false,
+  updateevents = 'TextChangedI'
+})
+EOF
 
-lua require('luasnip/loaders/from_vscode').load({
-\   paths = {'/home/fosseddy/.config/nvim/snippets'}
-\ })
+lua << EOF
+require('luasnip/loaders/from_vscode').load({
+  paths = {'/home/fosseddy/.config/nvim/snippets'}
+})
+EOF
 
-lua require('telescope').setup {
-\   defaults = {
-\       file_ignore_patterns = {'node_modules'}
-\   }
-\ }
+lua << EOF
+require('telescope').setup {
+  defaults = {
+      file_ignore_patterns = {'node_modules'}
+  },
+  pickers = {
+    find_files = {
+      theme = 'dropdown'
+    },
+    live_grep = {
+      theme = 'dropdown'
+    },
+    grep_string = {
+      theme = 'dropdown'
+    },
+    buffers = {
+      theme = 'dropdown'
+    }
+  }
+}
+EOF
 
 set tabstop=2
 set shiftwidth=2

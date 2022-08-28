@@ -74,9 +74,6 @@ set noshowmode
 
 set tabpagemax=5
 
-set nohlsearch
-set incsearch
-
 set noerrorbells
 
 set hidden
@@ -91,8 +88,7 @@ set listchars=trail:·,tab:·\
 set splitbelow
 set splitright
 
-set guicursor=a:block-blinkwait700-blinkoff400-blinkon250-Cursor,
-             \i:CursorI,r:CursorR
+set guicursor=a:block-blinkwait300-blinkon200-blinkoff150-Cursor,i:CursorI,r:CursorR
 
 let mapleader = ' '
 
@@ -102,27 +98,12 @@ nnoremap <leader>fb :lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fg :lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fs :lua require('telescope.builtin').grep_string()<cr>
 
-" Vim tabs
-nnoremap <leader>t1 1gt
-nnoremap <leader>t2 2gt
-nnoremap <leader>t3 3gt
-nnoremap <leader>t4 4gt
-nnoremap <leader>t5 5gt
-nnoremap <leader>t6 6gt
-nnoremap <leader>t7 7gt
-nnoremap <leader>t8 8gt
-nnoremap <leader>t9 9gt
-nnoremap <leader>th :tabfirst<cr>
-nnoremap <leader>tj :tabprev<cr>
-nnoremap <leader>tk :tabnext<cr>
-nnoremap <leader>tl :tablast<cr>
-
 " Popup menu
 inoremap <expr> <Tab> pumvisible() ? '\<C-n>' : '\<Tab>'
 inoremap <expr> <S-Tab> pumvisible() ? '\<C-p>' : '\<S-Tab>'
 
 " LuaSnip
-imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>' 
+imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>'
 inoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>
 snoremap <silent> <Tab> <cmd>lua require('luasnip').jump(1)<Cr>
 snoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>

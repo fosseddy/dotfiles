@@ -60,7 +60,7 @@ exec 'hi ColorColumn gui=none                      guibg='.s:theme.dbg
 " --- Languages ---------------------------------------------------------------
 exec 'hi Constant  gui=none guifg='.s:theme.fg
 exec 'hi String    gui=none guifg='.s:theme.str
-exec 'hi Character gui=none guifg='.s:theme.str
+"exec 'hi Character gui=none guifg='
 "exec 'hi Number    gui=none guifg='
 "exec 'hi Boolean   gui=none guifg='
 "exec 'hi Float     gui=none guifg='

@@ -26,30 +26,29 @@ syn keyword cKeyword auto double int struct break else long switch case
                    \ atomic_size_t atomic_ptrdiff_t atomic_intmax_t
                    \ atomic_uintmax_t
 
-syn keyword cTodo TODO NOTE FIXME XXX contained containedin=cComment
 syn region cComment start="/\*" end="\*/"
 syn region cComment start="//" skip="\\$" end="$" keepend
 
 syn region cString start=+"+ skip=+\\"+ end=+"+
 syn region cString start=+'+ skip=+\\'+ end=+'+
-syn match cSpecial "\\\(x\x\+\|\o\{1,3}\|.\|$\)" display contained
-                 \ containedin=cString
 
-syn match cInclude "#include\s*[<"]" display
-syn match cIncludeString "<[^>]*>" display contained containedin=cInclude
+syn match cSpecial "\\\(x\x\+\|\o\{1,3}\|.\|$\)"
+                 \ display contained containedin=cString
+
+syn match cIncludeString "<[^>]*>" display contained
 syn region cIncludeString start=+"+ skip=+\\"+ end=+"+ display contained
-                        \ containedin=cInclude
+syn match cInclude "#include\s*[<"]" display contains=cIncludeString
 
 syn match cPreProc /#\(define\|undef\|ifdef\|ifndef\|if\|else\|elif\|endif\|
                       \error\|pragma\)/ display
 
-let b:current_syntax = "c"
-
 hi def link cKeyword       Statement
 hi def link cComment       Comment
-hi def link cTodo          Todo
 hi def link cSpecial       Special
 hi def link cString        String
 hi def link cIncludeString Identifier
 hi def link cInclude       String
 hi def link cPreProc       String
+
+syn sync minlines=200
+let b:current_syntax = "c"

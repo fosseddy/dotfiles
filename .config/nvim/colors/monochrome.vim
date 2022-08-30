@@ -164,24 +164,6 @@ let g:lightline#colorscheme#monochrome#palette = lightline#colorscheme#fill(s:p)
 "call s:hi("tsxTagName", s:theme.keyword)
 "call s:hi("tsxIntrinsicTagName", s:theme.keyword)
 
-"" --- JavaScript --------------------------------------------------------------
-"exec 'hi javaScriptNull       gui=none guifg='.s:theme.fg
-"exec 'hi javaScriptType       gui=none guifg='.s:theme.fg
-"exec 'hi javaScriptGlobal     gui=none guifg='.s:theme.fg
-"exec 'hi javaScriptMember     gui=none guifg='.s:theme.fg
-"exec 'hi javaScriptMessage    gui=none guifg='.s:theme.fg
-"exec 'hi javaScriptFunction   gui=none guifg='.s:theme.kwd
-"exec 'hi javaScriptIdentifier gui=none guifg='.s:theme.kwd
-"exec 'hi javaScriptDeprecated gui=none guifg='.s:theme.fg
-"
-"" --- CSS ---------------------------------------------------------------------
-"exec 'hi cssProp              gui=none guifg='.s:theme.kwd
-"exec 'hi cssTagName           gui=none guifg='.s:theme.str
-"exec 'hi cssClassName         gui=none guifg='.s:theme.str
-"exec 'hi cssIdentifier        gui=none guifg='.s:theme.str
-"exec 'hi cssAtRuleLogical     gui=none guifg='.s:theme.fg
-"exec 'hi cssAttributeSelector gui=none guifg='.s:theme.fg
-"
 "" --- SCSS --------------------------------------------------------------------
 "exec 'hi sassId                     gui=none guifg='.s:theme.str
 "exec 'hi sassFor                    gui=none guifg='.s:theme.kwd
@@ -191,24 +173,6 @@ let g:lightline#colorscheme#monochrome#palette = lightline#colorscheme#fill(s:p)
 "exec 'hi sassControl                gui=none guifg='.s:theme.kwd
 "exec 'hi sassAmpersand              gui=none guifg='.s:theme.str
 "exec 'hi sassInterpolationDelimiter gui=none guifg='.s:theme.kwd
-"
-"" --- HTML --------------------------------------------------------------------
-"let html_no_rendering = 1
-"exec 'hi htmlArg         gui=none guifg='.s:theme.fg
-"exec 'hi htmlSpecialChar gui=none guifg='.s:theme.str
-"
-"" --- Dart --------------------------------------------------------------------
-"exec 'hi dartType     gui=none guifg='.s:theme.fg
-"exec 'hi dartAssert   gui=none guifg='.s:theme.fg
-"exec 'hi dartLibrary  gui=none guifg='.s:theme.kwd
-"exec 'hi dartCoreType gui=none guifg='.s:theme.kwd
-"
-"" --- Go ----------------------------------------------------------------------
-"exec 'hi goType         gui=none guifg='.s:theme.fg
-"exec 'hi goFloats       gui=none guifg='.s:theme.fg
-"exec 'hi goComplexes    gui=none guifg='.s:theme.fg
-"exec 'hi goSignedInts   gui=none guifg='.s:theme.fg
-"exec 'hi goUnsignedInts gui=none guifg='.s:theme.fg
 
 " --- Telescope ---------------------------------------------------------------
 exec 'hi TelescopeMatching gui=none guifg='.s:theme.bg 'guibg='.s:theme.kwd

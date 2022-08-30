@@ -14,7 +14,7 @@ syn match cssAtRule /@\(charset\|color-profile\|counter-style\|font-face\|font-f
                        \layer\|media\|namespace\|page\|property\|scroll-timeline\|supports\)/
 
 syn match cssProp /[a-zA-Z-_]\+:/he=e-1 display contained
-syn region cssBlock start="{" end="}" transparent contains=cssBlock,cssProp,cssString
+syn region cssBlock start="{" end="}" transparent contains=cssBlock,cssProp,cssString,cssComment
 syn match cssPseudo /:\{1,2}[a-zA-Z0-9-_]\+/
 
 syn region cssSelectorAttr start=/\[/ end=/\]/

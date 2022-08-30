@@ -58,6 +58,9 @@ exec 'hi SignColumn  gui=none                      guibg='.s:theme.bg
 exec 'hi ColorColumn gui=none                      guibg='.s:theme.dbg
 
 " --- Languages ---------------------------------------------------------------
+autocmd Syntax * syn match shebang /#!.*/
+hi def link shebang Comment
+
 exec 'hi Constant  gui=none guifg='.s:theme.fg
 exec 'hi String    gui=none guifg='.s:theme.str
 "exec 'hi Character gui=none guifg='

@@ -5,7 +5,6 @@ if !exists("main_syntax")
   let main_syntax = "html"
 endif
 
-
 syn region htmlTag start=+<+ end=+>+ contains=htmlComment,htmlTagName,htmlString
 
 syn region htmlComment start="<!--" end="-->" contained

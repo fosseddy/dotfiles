@@ -2,9 +2,8 @@ if exists("b:current_syntax")
   finish
 endif
 
-syn keyword goKeyword break default func interface select case defer go map
-                    \ struct chan else goto package switch const fallthrough
-                    \ if range type continue for import return var
+syn keyword goKeyword break default func interface select case defer go map struct chan else goto package switch const
+                    \ fallthrough if range type continue for import return var
 
 syn region goComment start="/\*" end="\*/"
 syn region goComment start="//" skip="\\$" end="$" keepend

@@ -5,6 +5,9 @@ if !exists("main_syntax")
   let main_syntax = "css"
 endif
 
+syn case ignore
+syn iskeyword @,48-57,_,192-255,-
+
 syn region cssComment start="/\*" end="\*/"
 
 syn region cssString start=+"+ skip=+\\"+ end=+"+

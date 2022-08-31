@@ -34,9 +34,9 @@ hi def link cKeyword       Statement
 hi def link cComment       Comment
 hi def link cSpecial       Special
 hi def link cString        String
-hi def link cIncludeString Identifier
-hi def link cInclude       String
-hi def link cPreProc       String
+hi def link cIncludeString String
+hi def link cInclude       Statement
+hi def link cPreProc       Statement
 
 syn sync minlines=200
 let b:current_syntax = "c"

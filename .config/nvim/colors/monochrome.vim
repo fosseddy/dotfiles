@@ -1,8 +1,7 @@
 hi clear
-if exists("syntax_on")
-   syntax reset
-endif
+syntax reset
 
+set termguicolors
 set background=dark
 
 let g:colors_name = "monochrome"

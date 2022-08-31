@@ -12,7 +12,6 @@ Plug 'digitaltoad/vim-pug'
 Plug 'L3MON4D3/luasnip'
 call plug#end()
 
-set termguicolors
 colorscheme monochrome
 
 let g:lightline = {

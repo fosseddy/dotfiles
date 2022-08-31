@@ -6,9 +6,9 @@ if !exists("main_syntax")
 endif
 
 syn keyword javascriptKeyword await break case catch class const continue debugger default delete do else enum export
-                            \ extends finally for function if implements import in instanceof interface let new package
-                            \ private protected public return static super switch this throw try typeof var void while
-                            \ with yield async
+syn keyword javascriptKeyword extends finally for function if implements import in instanceof interface let new package
+syn keyword javascriptKeyword private protected public return static super switch this throw try typeof var void while
+syn keyword javascriptKeyword with yield async
 
 syn region javascriptComment start="/\*" end="\*/"
 syn region javascriptComment start="//" skip="\\$" end="$" keepend

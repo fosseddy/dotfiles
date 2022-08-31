@@ -78,6 +78,8 @@ set noerrorbells
 
 set hidden
 
+set nohlsearch
+
 set signcolumn=yes
 set colorcolumn=80
 set scrolloff=20

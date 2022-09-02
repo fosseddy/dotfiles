@@ -49,13 +49,17 @@ exec 'hi MatchParen  gui=none guifg='.s:kwd 'guibg='.s:lbg
 exec 'hi SignColumn  gui=none                guibg='.s:bg
 exec 'hi ColorColumn gui=none                guibg='.s:dbg
 
+exec 'hi DebugR      gui=none guifg='.s:bg  'guibg='.s:red
+exec 'hi DebugM      gui=none guifg='.s:bg  'guibg='.s:magenta
+exec 'hi DebugB      gui=none guifg='.s:bg  'guibg='.s:blue
+
 " --- Languages ---------------------------------------------------------------
 autocmd Syntax * syn match Shebang /#!.*/
 hi def link Shebang Comment
 
 exec 'hi Constant  gui=none guifg='.s:fg
 exec 'hi String    gui=none guifg='.s:str
-"exec 'hi Character gui=none guifg='
+exec 'hi Character gui=none guifg='.s:str
 "exec 'hi Number    gui=none guifg='
 "exec 'hi Boolean   gui=none guifg='
 "exec 'hi Float     gui=none guifg='
@@ -86,7 +90,7 @@ exec 'hi Special        gui=none guifg='.s:fg
 "exec 'hi SpecialChar    gui=none guifg='
 "exec 'hi Tag            gui=none guifg='
 "exec 'hi Delimiter      gui=none guifg='
-"exec 'hi SpecialComment gui=none guifg='
+exec 'hi SpecialComment gui=none guifg='.s:lbg
 "exec 'hi Debug          gui=none guifg='
 
 exec 'hi Comment    gui=none guifg='.s:lbg
@@ -115,3 +119,7 @@ exec 'hi TelescopeMatching gui=none guifg='.s:bg 'guibg='.s:kwd
 
 " --- Plug --------------------------------------------------------------------
 exec 'hi plugDeleted gui=none guifg='.s:lbg
+
+" --- HTML --------------------------------------------------------------------
+let html_no_rendering = 1
+let html_wrong_comments = 1

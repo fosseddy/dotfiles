@@ -3,7 +3,7 @@
 
 alias ls="ls -Aghv --time-style=+'|' --color=auto"
 alias v="nvim"
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.arch-config --work-tree=$HOME"
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias mount-macos="sudo mount -t cifs //fosseddy-mac.dlink/fosseddy /mnt/imac/ -o username=fosseddy"
 alias umount-macos="sudo umount -l /mnt/imac"
 alias wttr="curl https://wttr.in/chelyabinsk?format=4"

@@ -1,7 +1,7 @@
 [core]
 	editor = nvim
 [user]
-	name = Mark Fosseddy
+	name = fosseddy
 	email = markfosseddy@gmail.com
 [init]
   defaultBranch = master

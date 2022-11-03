@@ -2,15 +2,13 @@
 [[ $- != *i* ]] && return
 
 alias ls="ls -Aghv --time-style=+'|' --color=auto"
-alias v="nvim"
+alias v="$HOME/nvim/bin/nvim"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-alias mount-macos="sudo mount -t cifs //fosseddy-mac.dlink/fosseddy /mnt/imac/ -o username=fosseddy"
-alias umount-macos="sudo umount -l /mnt/imac"
 alias wttr="curl https://wttr.in/chelyabinsk?format=4"
-alias bat-stat="cat /sys/class/power_supply/BAT0/capacity && cat /sys/class/power_supply/BAT0/status"
+alias bat-stat="cat $DEVICES/power_supply/BAT0/capacity && cat $DEVICES/power_supply/BAT0/status"
 alias cal="cal -m"
 
 PS1="\[\e[33m\][\[\e[m\]\[\e[33m\]\u\[\e[m\]\[\e[33m\]]\[\e[m\]\[\e[34m\][\[\e[m\]\[\e[34m\]\w\[\e[m\]\[\e[34m\]]\[\e[m\]\[\e[35m\]\\$\[\e[m\] "
 
-~/bin/pick-random-color-script
-~/bin/task-list print
+bin/pick-random-color-script
+bin/task-list print

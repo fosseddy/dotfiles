@@ -1,5 +1,3 @@
-syn keyword javaScriptReserved from
-
 hi! def link javaScriptType       Identifier
 hi! def link javaScriptFunction   Statement
 hi! def link javaScriptNull       Constant

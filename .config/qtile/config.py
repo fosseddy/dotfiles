@@ -112,6 +112,8 @@ floating_layout = layout.Floating(float_rules=[
 
 screens = [
     Screen(
+        wallpaper="/home/fosseddy/wallpapers/tree.jpg",
+        wallpaper_mode="stretch",
         top=bar.Bar(
             [
                 widget.CurrentLayoutIcon(scale=0.6),

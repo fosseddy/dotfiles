@@ -7,5 +7,10 @@
   "note": {
     "prefix": "note",
     "body": "@NOTE(art): $0"
+  },
+
+  "leak": {
+    "prefix": "leak",
+    "body": "@LEAK(art): $0"
   }
 }

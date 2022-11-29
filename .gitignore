@@ -1,1 +1,3 @@
 .arch-config
+.vim/plugged
+.vim/autoload

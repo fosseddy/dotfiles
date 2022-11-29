@@ -17,12 +17,16 @@ let s:yellow = '#e2a478'
 let s:magenta = '#a093c7'
 
 " Theme Colors
-let s:fg = "#d6cbc5"
 let s:bg = "#161821"
 let s:lbg = "#454b68"
 let s:dbg = "#0e0f15"
-let s:str = "#d2a494"
-let s:kwd = "#f7d492"
+let s:fg = "#ebcfbc"
+let s:kwd = "#dcb9a1"
+let s:str = "#d4af96"
+
+"let s:fg = "#d6cbc5"
+"let s:str = "#d2a494"
+"let s:kwd = "#f7d492"
 
 " --- UI ----------------------------------------------------------------------
 exec 'hi Cursor      gui=none guifg='.s:bg  'guibg='.s:white

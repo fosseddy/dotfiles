@@ -15,7 +15,6 @@ call plug#end()
 let g:snipMate = { 'snippet_version' : 1 }
 
 let g:lightline = {
-\   'colorscheme': 'srcery_drk',
 \   'tabline': {
 \       'left': [[ 'tabs' ]],
 \       'right': [['']]
@@ -26,7 +25,18 @@ let g:lightline = {
 \   }
 \}
 
-colorscheme habamax
+if has("gui_running")
+    colorscheme monochrome
+    let g:lightline.colorscheme = 'monochrome'
+    set guifont=CodeNewRoman\ 14
+    set guioptions="c"
+    set guicursor=a:block-blinkwait400-blinkon600-blinkoff400-Cursor,
+                 \i:block-blinkwait400-blinkon600-blinkoff400-CursorI,
+                 \r:block-blinkwait400-blinkon600-blinkoff400-CursorR
+else
+    colorscheme habamax
+    let g:lightline.colorscheme = 'srcery_drk'
+endif
 
 set laststatus=2
 set tabstop=4

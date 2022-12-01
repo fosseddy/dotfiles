@@ -1,10 +1,10 @@
 hi clear
-if exists("syntax_on")
+if exists('syntax_on')
     syntax reset
 endif
 
 set background=dark
-let g:colors_name = "monochrome"
+let g:colors_name = 'monochrome'
 
 " Terminal Colors
 let s:red = '#e27878'
@@ -17,16 +17,12 @@ let s:yellow = '#e2a478'
 let s:magenta = '#a093c7'
 
 " Theme Colors
-let s:bg = "#161821"
-let s:lbg = "#454b68"
-let s:dbg = "#0e0f15"
-let s:fg = "#ebcfbc"
-let s:kwd = "#dcb9a1"
-let s:str = "#d4af96"
-
-"let s:fg = "#d6cbc5"
-"let s:str = "#d2a494"
-"let s:kwd = "#f7d492"
+let s:bg = '#161821'
+let s:lbg = '#454b68'
+let s:dbg = '#0e0f15'
+let s:fg = '#d6cbc5'
+let s:kwd = '#f7d492'
+let s:str = '#d2a494'
 
 " --- UI ----------------------------------------------------------------------
 exec 'hi Cursor      gui=none guifg='.s:bg  'guibg='.s:white
@@ -124,6 +120,6 @@ let g:lightline#colorscheme#monochrome#palette = lightline#colorscheme#fill(s:p)
 " --- Plug --------------------------------------------------------------------
 exec 'hi plugDeleted gui=none guifg='.s:lbg
 
-" --- HTML --------------------------------------------------------------------
+" --- Html --------------------------------------------------------------------
 let html_no_rendering = 1
 let html_wrong_comments = 1

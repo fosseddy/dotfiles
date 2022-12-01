@@ -4,17 +4,16 @@ call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'preservim/nerdtree'
 
-Plug 'garbas/vim-snipmate'
-Plug 'marcweber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+Plug 'vim-utils/vim-man'
 call plug#end()
 
 let g:snipMate = { 'snippet_version' : 1 }
 
 let g:lightline = {
+\   'colorscheme': 'srcery_drk',
 \   'tabline': {
 \       'left': [[ 'tabs' ]],
 \       'right': [['']]
@@ -25,6 +24,8 @@ let g:lightline = {
 \   }
 \}
 
+colorscheme habamax
+
 if has("gui_running")
     colorscheme monochrome
     let g:lightline.colorscheme = 'monochrome'
@@ -33,9 +34,6 @@ if has("gui_running")
     set guicursor=a:block-blinkwait400-blinkon600-blinkoff400-Cursor,
                  \i:block-blinkwait400-blinkon600-blinkoff400-CursorI,
                  \r:block-blinkwait400-blinkon600-blinkoff400-CursorR
-else
-    colorscheme habamax
-    let g:lightline.colorscheme = 'srcery_drk'
 endif
 
 set laststatus=2
@@ -62,7 +60,7 @@ set shortmess-=S
 
 let g:mapleader = ' '
 
-nnoremap <leader>fs :Rg <c-r><c-w><cr>
-nnoremap <leader>fg :Rg<cr>
-nnoremap <leader>ff :Files<cr>
-nnoremap <leader>fb :Buffers<cr>
+nnoremap <silent><leader>fs :Rg <c-r><c-w><cr>
+nnoremap <silent><leader>fg :Rg<cr>
+nnoremap <silent><leader>ff :Files<cr>
+nnoremap <silent><leader>fb :Buffers<cr>

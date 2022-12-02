@@ -29,7 +29,7 @@ colorscheme habamax
 if has("gui_running")
     colorscheme monochrome
     let g:lightline.colorscheme = 'monochrome'
-    set guifont=CodeNewRoman\ 14
+    set guifont=CodeNewRoman\ 13
     set guioptions="c"
     set guicursor=a:block-blinkwait400-blinkon600-blinkoff400-Cursor,
                  \i:block-blinkwait400-blinkon600-blinkoff400-CursorI,

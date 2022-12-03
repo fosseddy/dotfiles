@@ -88,7 +88,7 @@ exec 'hi Type         gui=none guifg='.s:kwd
 "exec 'hi Structure    gui=none guifg='
 "exec 'hi Typedef      gui=none guifg='
 
-exec 'hi Special        gui=none guifg='.s:fg
+exec 'hi Special        gui=none guifg='.s:str
 "exec 'hi SpecialChar    gui=none guifg='
 "exec 'hi Tag            gui=none guifg='
 "exec 'hi Delimiter      gui=none guifg='

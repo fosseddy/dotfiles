@@ -26,6 +26,7 @@ hi! def link typescriptAssertType                Keyword
 hi! def link typescriptUnion                     Normal
 hi! def link typescriptOperator                  Keyword
 hi! def link typescriptKeywordOp                 Keyword
+hi! def link typescriptFuncComma                 Identifier
 
 hi! def link typescriptGlobal                    Identifier
 hi! def link typescriptGlobalMethod              Identifier

@@ -48,7 +48,7 @@ vim.opt.splitright = true
 -- Telescope
 local telescope = require("telescope")
 local telescope_builtin = require("telescope.builtin")
-telescope.setup = {
+telescope.setup({
     defaults = {
         file_ignore_patterns = { "node_modules" }
     },
@@ -58,7 +58,7 @@ telescope.setup = {
         grep_string = { theme = "dropdown" },
         buffers = { theme = "dropdown" }
     }
-}
+})
 vim.keymap.set("n", "<leader>ff", telescope_builtin.find_files)
 vim.keymap.set("n", "<leader>fb", telescope_builtin.buffers)
 vim.keymap.set("n", "<leader>fg", telescope_builtin.live_grep)

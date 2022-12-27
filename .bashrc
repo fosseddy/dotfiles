@@ -2,7 +2,7 @@
 [[ $- != *i* ]] && return
 
 alias ls="ls -Aghv --time-style=+'|' --color=auto"
-alias v="gvim"
+alias v="nvim"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias wttr="curl https://wttr.in/chelyabinsk?format=4"
 alias bat-stat="cat $DEVICES/power_supply/BAT0/capacity && cat $DEVICES/power_supply/BAT0/status"

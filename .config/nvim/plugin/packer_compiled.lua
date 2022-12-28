@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/home/fosseddy/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["lightline.vim"] = {
-    loaded = true,
-    path = "/home/fosseddy/.local/share/nvim/site/pack/packer/start/lightline.vim",
-    url = "https://github.com/itchyny/lightline.vim"
-  },
   nerdtree = {
     loaded = true,
     path = "/home/fosseddy/.local/share/nvim/site/pack/packer/start/nerdtree",

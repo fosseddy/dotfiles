@@ -6,51 +6,43 @@ packer.startup(function(use)
         "nvim-telescope/telescope.nvim", tag = "0.1.0",
         requires = {{ "nvim-lua/plenary.nvim" }}
     })
-    use("itchyny/lightline.vim")
     use({ "L3MON4D3/LuaSnip", tag = "v1.*" })
 end)
 
-vim.cmd.colorscheme("monochrome")
+vim.cmd.colorscheme("art")
 
 vim.g.mapleader = " "
-vim.g.lightline = {
-    colorscheme = "monochrome",
-    tabline = {
-        left = {{ "tabs" }},
-        right = {{ "" }}
-    },
-    tab = {
-        active = { "tabnum", "filename", "modified" },
-        inactive = { "tabnum", "filename", "modified" }
-    }
-}
 
-vim.opt.termguicolors = true
-vim.opt.guicursor = ""
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
+vim.opt.wrap = false
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.showmode = false
 vim.opt.tabpagemax = 5
 vim.opt.errorbells = false
+vim.opt.hlsearch = false
 vim.opt.hidden = true
 vim.opt.signcolumn = "yes"
 vim.opt.colorcolumn = "80"
 vim.opt.scrolloff = 20
 vim.opt.list = true
-vim.opt.listchars = { trail = "·", tab = "· " }
+vim.opt.listchars = { trail = "·", tab = "  " }
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
 -- Telescope
 local telescope = require("telescope")
 local telescope_builtin = require("telescope.builtin")
+local telescope_previewers = require("telescope.previewers")
 telescope.setup({
     defaults = {
-        file_ignore_patterns = { "node_modules" }
+        file_ignore_patterns = { "node_modules" },
+        buffer_previewer_maker = function(a, b, c)
+            c.use_ft_detect = false
+            telescope_previewers.buffer_previewer_maker(a, b, c)
+        end
     },
     pickers = {
         find_files = { theme = "dropdown" },

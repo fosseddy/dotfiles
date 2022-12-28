@@ -11,12 +11,10 @@ from libqtile.utils import guess_terminal
 mod = "mod4"
 terminal = "alacritty"
 browser = "brave"
-editor = "gvim"
 
 keys = [
     Key([mod], "Return", lazy.spawn(terminal)),
     Key([mod], "b", lazy.spawn(browser)),
-    Key([mod], "v", lazy.spawn(editor)),
 
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
     Key([], "XF86AudioMicMute", lazy.spawn("amixer set Capture toggle -q")),
@@ -89,8 +87,8 @@ for i in groups:
 
 theme = dict(
     margin=5,
-    border_focus="#84a0c6",
-    border_normal="#161821",
+    border_focus="#7fa5bd",
+    border_normal="#000000",
     border_width=2,
 )
 
@@ -102,7 +100,7 @@ layouts = [
 widget_defaults = dict(
     font="CodeNewRoman",
     fontsize=14,
-    padding=4,
+    padding=4
 )
 
 extension_defaults = widget_defaults.copy()
@@ -134,7 +132,7 @@ screens = [
         top=bar.Bar(
             [
                 widget.CurrentLayoutIcon(scale=0.6),
-                widget.GroupBox(this_current_screen_border="#84a0c6"),
+                widget.GroupBox(this_current_screen_border="#7fa5bd"),
                 widget.Prompt(prompt="run: "),
 
                 widget.Spacer(),
@@ -165,20 +163,20 @@ screens = [
                 widget.Spacer(length=theme["margin"]),
             ],
             32,
-            **{"background": "#161821"}
+            **{"background": "#000000"}
         ),
         bottom=bar.Bar(
             [
                 widget.TaskList(
                     icon_size=0,
-                    border="#84a0c6",
+                    border="#7fa5bd",
                     txt_floating="f ",
                     txt_minimized="m ",
                     parse_text=parse_winname
                 ),
             ],
             32,
-            **{"background": "#161821"}
+            **{"background": "#000000"}
         ),
     ),
 ]

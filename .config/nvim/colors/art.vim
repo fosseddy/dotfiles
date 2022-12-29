@@ -6,7 +6,6 @@ endif
 set background=dark
 let g:colors_name='art'
 
-" Terminal Colors
 " black   0 8
 " red     1 9
 " green   2 10
@@ -69,35 +68,19 @@ hi! link SpellCap   DebugB
 hi! link SpellRare  DebugG
 hi! link SpellLocal DebugG
 
-" Terminal Colors
-" black   0 8
-" red     1 9
-" green   2 10
-" yellow  3 11
-" blue    4 12
-" magenta 5 13
-" cyan    6 14
-" white   7 15
 " --- Languages ---------------------------------------------------------------
-autocmd Syntax * syn match Shebang /#!.*/
-hi def link Shebang Comment
-
-hi Underlined cterm=underline ctermfg=fg
-hi MatchParen cterm=NONE      ctermbg=8
+hi Underlined cterm=underline       ctermfg=fg
+hi MatchParen cterm=NONE            ctermbg=8
 hi Comment    cterm=NONE ctermfg=8
 hi String     cterm=NONE ctermfg=2
 hi Constant	  cterm=NONE ctermfg=fg
 hi Identifier cterm=NONE ctermfg=fg
 hi Statement  cterm=NONE ctermfg=fg	
-hi PreProc    cterm=NONE ctermfg=fg	
+hi PreProc    cterm=NONE ctermfg=fg
 hi Type       cterm=NONE ctermfg=fg	
+hi Special    cterm=NONE ctermfg=fg
 
 hi! link Todo           Comment
-hi! link Special        String
-hi! link Error          ErrorMsg
-"hi! link SpecialChar    String
-"hi! link Character      String
-"hi! link SpecialComment String
 
 "NERD Tree
 hi NERDTreeExecFile cterm=NONE ctermfg=2

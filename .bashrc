@@ -1,7 +1,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls="ls -Aghv --time-style=+'|' --color=auto"
+alias ls="ls -AGlhv --time-style=+'|' --color=auto"
 alias v="nvim"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias wttr="curl https://wttr.in/chelyabinsk?format=4"

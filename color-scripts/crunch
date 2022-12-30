@@ -38,16 +38,10 @@ initializeANSI
 
 cat << EOF
 
- ${reset}${redf}  ██  ██   ${reset}${greenf}   ██  ██   ${reset}${yellowf}   ██  ██
- ${reset}${redf}██████████ ${reset}${greenf} ██████████ ${reset}${yellowf} ██████████
- ${reset}${redf}  ██${boldon}${redfbright}██${boldoff}${redf}██   ${reset}${greenf}   ██${boldon}${greenfbright}██${boldoff}${greenf}██   ${reset}${yellowf}   ██${boldon}${yellowfbright}██${boldoff}${yellowf}██
- ${reset}${redf}██████████ ${reset}${greenf} ██████████ ${reset}${yellowf} ██████████
- ${reset}${redf}  ██  ██   ${reset}${greenf}   ██  ██   ${reset}${yellowf}   ██  ██
+ ${reset}${redf}  ██  ██   ${reset}${greenf}   ██  ██   ${reset}${yellowf}   ██  ██    ${reset}${bluef}  ██  ██   ${reset}${purplef}   ██  ██   ${reset}${cyanf}   ██  ██
+ ${reset}${redf}██████████ ${reset}${greenf} ██████████ ${reset}${yellowf} ██████████ ${reset}${bluef} ██████████ ${reset}${purplef} ██████████  ${reset}${cyanf}██████████
+ ${reset}${redf}  ██${boldon}${redfbright}██${boldoff}${redf}██   ${reset}${greenf}   ██${boldon}${greenfbright}██${boldoff}${greenf}██   ${reset}${yellowf}   ██${boldon}${yellowfbright}██${boldoff}${yellowf}██   ${reset}${bluef}   ██${boldon}${bluefbright}██${boldoff}${bluef}██ ${reset}${purplef}     ██${boldon}${purplefbright}██${boldoff}${purplef}██   ${reset}${cyanf}   ██${boldon}${cyanfbright}██${boldoff}${cyanf}██
+ ${reset}${redf}██████████ ${reset}${greenf} ██████████ ${reset}${yellowf} ██████████ ${bluef} ██████████ ${purplef} ██████████ ${reset}${cyanf} ██████████
+ ${reset}${redf}  ██  ██   ${reset}${greenf}   ██  ██   ${reset}${yellowf}   ██  ██   ${reset}${bluef}   ██  ██   ${reset}${purplef}   ██  ██   ${reset}${cyanf}   ██  ██${reset}
  ${reset}
- ${reset}${bluef}  ██  ██   ${reset}${purplef}   ██  ██   ${reset}${cyanf}   ██  ██
-${reset}${bluef} ██████████ ${reset}${purplef} ██████████  ${reset}${cyanf}██████████
-${reset}${bluef}   ██${boldon}${bluefbright}██${boldoff}${bluef}██ ${reset}${purplef}     ██${boldon}${purplefbright}██${boldoff}${purplef}██   ${reset}${cyanf}   ██${boldon}${cyanfbright}██${boldoff}${cyanf}██
-${bluef} ██████████ ${purplef} ██████████ ${reset}${cyanf} ██████████
-${reset}${bluef}   ██  ██   ${reset}${purplef}   ██  ██   ${reset}${cyanf}   ██  ██${reset}
-
 EOF

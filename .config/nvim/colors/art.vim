@@ -55,8 +55,8 @@ exec 'hi PmenuSbar    cterm=NONE            ctermbg=bg gui=NONE                 
 exec 'hi PmenuThumb   cterm=NONE            ctermbg=fg gui=NONE                    guibg=fg'
 exec 'hi ColorColumn  cterm=NONE            ctermbg=8  gui=NONE                    guibg='.s:dblack
 exec 'hi WinSeparator cterm=NONE ctermfg=8  ctermbg=fg gui=NONE guifg='.s:dblack  'guibg=fg'
-exec 'hi IncSearch    cterm=NONE ctermfg=bg ctermbg=3  gui=NONE guifg=bg           guibg='s:yellow
-exec 'hi Search       cterm=NONE ctermfg=bg ctermbg=fg gui=NONE guifg=bg           guibg=fg'
+exec 'hi IncSearch    cterm=NONE ctermfg=bg ctermbg=3  gui=NONE guifg=bg           guibg='.s:yellow
+exec 'hi Search       cterm=NONE ctermfg=bg ctermbg=4  gui=NONE guifg=bg           guibg='.s:blue
 exec 'hi CursorLine   cterm=NONE ctermfg=fg ctermbg=8  gui=NONE guifg=fg           guibg='.s:lblack
 exec 'hi TabLine      cterm=NONE ctermfg=fg ctermbg=8  gui=NONE guifg=fg           guibg='.s:dblack
 exec 'hi TabLineSel   cterm=NONE ctermfg=bg ctermbg=fg gui=NONE guifg=fg           guibg='.s:lblack

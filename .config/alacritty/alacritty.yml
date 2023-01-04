@@ -180,6 +180,7 @@ colors:
     background: "#1c1c1c"
   cursor:
     cursor: "#d0d0d0"
+    text: "#1c1c1c"
   normal:
     black: "#1c1c1c"
     red: "#a36666"

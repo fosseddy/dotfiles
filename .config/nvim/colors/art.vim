@@ -28,7 +28,7 @@ let s:lwhite   = '#efefef' "15
 let s:dblack = '#121212'
 
 " --- UI ---
-exec 'hi Normal cterm=NONE ctermfg=7 ctermbg=1 gui=NONE guifg='.s:white 'guibg='.s:black
+exec 'hi Normal cterm=NONE ctermfg=7 ctermbg=0 gui=NONE guifg='.s:white 'guibg='.s:black
 
 exec 'hi DebugR cterm=NONE ctermfg=bg ctermbg=9  gui=NONE guifg=fg guibg='.s:lred
 exec 'hi DebugG cterm=NONE ctermfg=bg ctermbg=10 gui=NONE guifg=fg guibg='.s:lgreen

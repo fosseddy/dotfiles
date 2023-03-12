@@ -1,16 +1,16 @@
 {
     "todo": {
         "prefix": "todo",
-        "body": "@Todo(art): $0"
+        "body": "TODO: $0"
     },
 
     "note": {
         "prefix": "note",
-        "body": "@Note(art): $0"
+        "body": "NOTE: $0"
     },
 
     "leak": {
         "prefix": "leak",
-        "body": "@Leak(art): $0"
+        "body": "LEAK: $0"
     }
 }

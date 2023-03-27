@@ -50,7 +50,7 @@ exec 'hi ModeMsg      cterm=NONE ctermfg=fg            gui=NONE guifg=fg'
 exec 'hi WildMenu     cterm=NONE ctermfg=fg ctermbg=8  gui=NONE guifg=fg           guibg='.s:lblack
 exec 'hi SignColumn   cterm=NONE ctermfg=8  ctermbg=bg gui=NONE guifg='.s:lblack  'guibg=bg'
 exec 'hi Pmenu        cterm=NONE ctermfg=fg ctermbg=8  gui=NONE guifg=fg           guibg='.s:lblack
-exec 'hi PmenuSel     cterm=NONE ctermfg=bg ctermbg=fg gui=NONE guifg=fg'         'guibg='.s:dblack
+exec 'hi PmenuSel     cterm=NONE ctermfg=bg ctermbg=3 gui=NONE guifg=bg'         'guibg='.s:yellow
 exec 'hi PmenuSbar    cterm=NONE            ctermbg=bg gui=NONE                    guibg='.s:dblack
 exec 'hi PmenuThumb   cterm=NONE            ctermbg=fg gui=NONE                    guibg=fg'
 exec 'hi ColorColumn  cterm=NONE            ctermbg=8  gui=NONE                    guibg='.s:dblack

@@ -30,7 +30,7 @@ let s:dblack = '#121212'
 " --- UI ---
 exec 'hi Normal cterm=NONE ctermfg=7 ctermbg=0 gui=NONE guifg='.s:white 'guibg='.s:black
 
-exec 'hi DebugR cterm=NONE ctermfg=fg ctermbg=1  gui=NONE guifg=fg guibg='.s:lred
+exec 'hi DebugR cterm=NONE ctermfg=fg ctermbg=1 gui=NONE guifg=fg guibg='.s:lred
 exec 'hi DebugG cterm=NONE ctermfg=fg ctermbg=2 gui=NONE guifg=fg guibg='.s:lgreen
 exec 'hi DebugB cterm=NONE ctermfg=fg ctermbg=4 gui=NONE guifg=fg guibg='.s:lblue
 
@@ -40,7 +40,7 @@ exec 'hi DebugB cterm=NONE ctermfg=fg ctermbg=4 gui=NONE guifg=fg guibg='.s:lblu
 
 exec 'hi SpecialKey   cterm=NONE ctermfg=6               gui=NONE guifg='.s:cyan
 exec 'hi NonText      cterm=NONE ctermfg=8               gui=NONE guifg='.s:lblack
-exec 'hi Directory    cterm=NONE ctermfg=4               gui=NONE guifg='.s:blue
+exec 'hi Directory    cterm=NONE ctermfg=12              gui=NONE guifg='.s:blue
 exec 'hi ErrorMsg     cterm=NONE ctermfg=fg ctermbg=1    gui=NONE guifg=fg           guibg='.s:red
 exec 'hi LineNr       cterm=NONE ctermfg=8               gui=NONE guifg='.s:lblack
 exec 'hi StatusLine   cterm=bold ctermfg=bg ctermbg=fg   gui=bold guifg=bg           guibg=fg'
@@ -82,8 +82,8 @@ hi! link SpellRare  DebugG
 hi! link SpellLocal DebugG
 
 " --- Languages ---
-exec 'hi Underlined cterm=underline ctermfg=fg             gui=underline guifg=fg'
-exec 'hi MatchParen cterm=NONE      ctermfg=5 ctermbg=NONE gui=NONE      guifg=fg  guibg='.s:lblack
+exec 'hi Underlined cterm=underline ctermfg=fg              gui=underline guifg=fg'
+exec 'hi MatchParen cterm=NONE      ctermfg=5  ctermbg=NONE gui=NONE      guifg=fg guibg='.s:lblack
 
 exec 'hi Comment    cterm=NONE ctermfg=8  gui=NONE guifg='.s:lblack
 exec 'hi String     cterm=NONE ctermfg=2  gui=NONE guifg='.s:green

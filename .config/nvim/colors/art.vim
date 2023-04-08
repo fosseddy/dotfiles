@@ -54,10 +54,10 @@ exec 'hi PmenuSel     cterm=NONE ctermfg=fg ctermbg=5    gui=NONE guifg=bg'     
 exec 'hi PmenuSbar    cterm=NONE            ctermbg=3    gui=NONE                    guibg='.s:dblack
 exec 'hi PmenuThumb   cterm=NONE            ctermbg=5    gui=NONE                    guibg=fg'
 exec 'hi ColorColumn  cterm=NONE            ctermbg=1    gui=NONE                    guibg='.s:dblack
-exec 'hi WinSeparator cterm=NONE ctermfg=bg ctermbg=fg   gui=NONE guifg='.s:dblack  'guibg=fg'
+exec 'hi WinSeparator cterm=NONE ctermfg=bg ctermbg=fg   gui=NONE guifg='.s:black   'guibg=fg'
 exec 'hi IncSearch    cterm=NONE ctermfg=fg ctermbg=5    gui=NONE guifg=bg           guibg='.s:magenta
 exec 'hi Search       cterm=NONE ctermfg=5  ctermbg=NONE gui=NONE guifg='.s:magenta 'guibg=NONE'
-exec 'hi CursorLine   cterm=NONE ctermfg=5               gui=NONE guifg=fg           guibg='.s:lblack
+exec 'hi CursorLine   cterm=NONE ctermfg=5               gui=NONE                    guibg='.s:lblack
 exec 'hi TabLine      cterm=NONE ctermfg=8  ctermbg=bg   gui=NONE guifg=fg           guibg='.s:dblack
 exec 'hi TabLineSel   cterm=NONE ctermfg=bg ctermbg=fg   gui=NONE guifg=fg           guibg='.s:lblack
 exec 'hi MoreMsg      cterm=NONE ctermfg=2               gui=NONE guifg='.s:green

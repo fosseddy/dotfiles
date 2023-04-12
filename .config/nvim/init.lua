@@ -64,6 +64,6 @@ luasnip.config.set_config({ history = false, updateevents = "TextChangedI" })
 luasnip_loader.lazy_load({ paths = { "./snippets" }})
 vim.keymap.set("i", "<Tab>", function()
     return luasnip.expand_or_jumpable() and "<Plug>luasnip-expand-or-jump"
-                                        or "<Tab>"
+                                        or  "<Tab>"
 end, { remap = true, expr = true })
 vim.keymap.set("n", "<leader>ss", luasnip.unlink_current)

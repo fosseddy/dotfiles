@@ -3,7 +3,7 @@ function create_type(prefix, suffix)
 end
 
 slash = create_type("//", "")
-hash  = create_type("'\\#'", "")
+hash  = create_type([[\\#]], "")
 
 filetypes = {
     javascript = slash,
@@ -18,11 +18,11 @@ filetypes = {
     sh         = hash,
     python     = hash,
     yaml       = hash,
-    asm        = create_type("\\;", ""),
-    html       = create_type("\\<\\!--", "--\\>"),
-    css        = create_type("/\\*", "\\*/"),
+    asm        = create_type([[\;]], ""),
+    html       = create_type([[\<\!--]], [[--\>]]),
+    css        = create_type([[/\*]], [[\*/]]),
     lua        = create_type("--", ""),
-    vim        = create_type("\\\"", ""),
+    vim        = create_type([[\"]], ""),
 }
 
 function get_lang()

@@ -1,11 +1,11 @@
-function create_type(prefix, suffix)
-    return { prefix = prefix, suffix = suffix }
+local create_type = function(prefix, suffix)
+    return {prefix = prefix, suffix = suffix}
 end
 
-slash = create_type("//", "")
-hash  = create_type([[\\#]], "")
+local slash = create_type("//", "")
+local hash = create_type([[\\#]], "")
 
-filetypes = {
+local filetypes = {
     javascript = slash,
     typescript = slash,
     go         = slash,
@@ -25,31 +25,25 @@ filetypes = {
     vim        = create_type([[\"]], ""),
 }
 
-function get_lang()
+local get_lang = function()
     local ft = vim.bo.filetype
     local lang = filetypes[ft]
 
-    local res = {}
-
     if lang == nil then
-        res.error = "vimcmd-toggle-comment: " .. ft .. " filetype is not supported"
-        return res
+        return nil, "vimcmd-toggle-comment: "..ft.." filetype is not supported"
     end
 
-    res.prefix = lang.prefix
-    res.suffix = lang.suffix
-
-    return res
+    return lang, ""
 end
 
 function toggle_comment()
-    r = get_lang()
+    lang, err = get_lang()
 
-    if r.error then
-        return print(r.error)
+    if err ~= "" then
+        return print(err)
     end
 
-    return ":!vimcmd-toggle-comment " .. r.prefix .. " " .. r.suffix .. "<cr>"
+    return ":!vimcmd-toggle-comment "..lang.prefix.." "..lang.suffix.."<cr>"
 end
 
-vim.keymap.set("v", "<leader>/", toggle_comment, { expr = true })
+vim.keymap.set("v", "<leader>/", toggle_comment, {expr = true})

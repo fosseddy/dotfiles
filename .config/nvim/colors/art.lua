@@ -7,27 +7,27 @@ end
 vim.opt.background = "dark"
 vim.g.colors_name = "art"
 
-local black    = {term = 0, gui = "#1c1c1c"}
-local red      = {term = 1, gui = "#a36666"}
-local green    = {term = 2, gui = "#90a57d"}
-local yellow   = {term = 3, gui = "#d7af87"}
-local blue     = {term = 4, gui = "#7fa5bd"}
-local magenta  = {term = 5, gui = "#c79ec4"}
-local cyan     = {term = 6, gui = "#8adbb4"}
-local white    = {term = 7, gui = "#d0d0d0"}
+local black = {term = 0, gui = "#1c1c1c"}
+local red = {term = 1, gui = "#a36666"}
+local green = {term = 2, gui = "#90a57d"}
+local yellow = {term = 3, gui = "#d7af87"}
+local blue = {term = 4, gui = "#7fa5bd"}
+local magenta = {term = 5, gui = "#c79ec4"}
+local cyan = {term = 6, gui = "#8adbb4"}
+local white = {term = 7, gui = "#d0d0d0"}
 
-local lblack   = {term = 8,  gui = "#4a4845"}
-local lred     = {term = 9,  gui = "#d78787"}
-local lgreen   = {term = 10, gui = "#afbea2"}
-local lyellow  = {term = 11, gui = "#e4c9af"}
-local lblue    = {term = 12, gui = "#a1bdce"}
+local lblack = {term = 8,  gui = "#4a4845"}
+local lred = {term = 9,  gui = "#d78787"}
+local lgreen = {term = 10, gui = "#afbea2"}
+local lyellow = {term = 11, gui = "#e4c9af"}
+local lblue = {term = 12, gui = "#a1bdce"}
 local lmagenta = {term = 13, gui = "#d7beda"}
-local lcyan    = {term = 14, gui = "#b1e7dd"}
-local lwhite   = {term = 15, gui = "#efefef"}
+local lcyan = {term = 14, gui = "#b1e7dd"}
+local lwhite = {term = 15, gui = "#efefef"}
 
-local dblack   = {gui = "#121212"}
+local dblack = {gui = "#121212"}
 
-local none     = {term = "NONE", gui = "NONE"}
+local none = {term = "NONE", gui = "NONE"}
 
 local hi = function(group, term, gui)
     local ttype = term.type or "NONE"

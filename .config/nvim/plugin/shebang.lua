@@ -3,4 +3,4 @@ vim.api.nvim_create_autocmd("Syntax", {
     command = "syn match _Shebang /#!.*/"
 })
 
-vim.cmd("hi def link _Shebang Comment")
+vim.cmd.highlight({"def", "link", "_Shebang", "Comment"})

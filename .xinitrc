@@ -40,6 +40,8 @@ xinput set-prop 'Logitech USB Optical Mouse' 'libinput Natural Scrolling Enabled
 xinput set-prop 'Logitech USB Optical Mouse' 'libinput Accel Speed' -0.4
 
 setxkbmap -option caps:escape
+setxkbmap -model pc104 -layout us,ru -option grp:rctrl_rshift_toggle
+
 xset r rate 200 50
 
 exec qtile start

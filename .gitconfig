@@ -1,7 +1,7 @@
 [core]
-	editor = vim
+    editor = vim
 [user]
-	name = fosseddy
-	email = markfosseddy@gmail.com
+    name = fosseddy
+    email = markfosseddy@gmail.com
 [init]
-  defaultBranch = master
+    defaultBranch = master

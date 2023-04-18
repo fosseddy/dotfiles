@@ -127,7 +127,7 @@ def parse_winname(text):
 
 screens = [
     Screen(
-        wallpaper=os.path.expanduser("~/wallpapers/tree.jpg"),
+        wallpaper=os.path.expanduser("~/.local/share/wallpapers/tree.jpg"),
         wallpaper_mode="stretch",
         top=bar.Bar(
             [

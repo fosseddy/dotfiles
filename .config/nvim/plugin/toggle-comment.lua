@@ -1,4 +1,4 @@
-local cmd_name = "vimcmd-toggle-comment"
+local cmd = "~/.local/lib/vimcmd-toggle-comment"
 
 local create_type = function(prefix, suffix)
     return {prefix = prefix, suffix = suffix}
@@ -32,7 +32,7 @@ local get_lang = function()
     local lang = filetypes[ft]
 
     if lang == nil then
-        return nil, cmd_name..": "..ft.." filetype is not supported"
+        return nil, cmd..": "..ft.." filetype is not supported"
     end
 
     return lang, ""
@@ -45,7 +45,7 @@ function toggle_comment()
         return print(err)
     end
 
-    return ":!"..cmd_name.." "..lang.prefix.." "..lang.suffix.."<cr>"
+    return ":!"..cmd.." "..lang.prefix.." "..lang.suffix.."<cr>"
 end
 
 vim.keymap.set("v", "<leader>/", toggle_comment, {expr = true})

@@ -1,6 +1,5 @@
-export PATH=$PATH:$HOME/bin
-export PATH=$PATH:$HOME/go/bin
-export PATH=$PATH:$HOME/.local/share/npm/bin
+export PATH=$PATH:$HOME/.local/bin
+#export PATH=$PATH:$HOME/go/bin
 
 export DEVICES=/sys/class
 

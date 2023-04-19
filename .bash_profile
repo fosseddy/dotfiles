@@ -1,5 +1,7 @@
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$HOME/.local/bin:$PATH
 
-export NPM_CONFIG_USERCONFIG=$HOME/.config/npm/.npmrc
+export XINITRC=$HOME/.config/xorg/xinitrc
+export XAUTHORITY=$HOME/.local/state/xorg/Xauthority
+export NPM_CONFIG_USERCONFIG=$HOME/.config/npm/npmrc
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc

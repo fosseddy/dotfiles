@@ -93,8 +93,8 @@ theme = dict(
 )
 
 layouts = [
-    layout.Columns(**theme),
-    layout.Max(margin=5)
+    layout.Columns(**{**theme, "margin":0}),
+    layout.Max()
 ]
 
 widget_defaults = dict(
@@ -127,7 +127,7 @@ def parse_winname(text):
 
 screens = [
     Screen(
-        wallpaper=os.path.expanduser("~/.local/share/wallpapers/tree.jpg"),
+        wallpaper=os.path.expanduser("~/.local/share/wallpapers/saint-rus.jpeg"),
         wallpaper_mode="stretch",
         top=bar.Bar(
             [

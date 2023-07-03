@@ -1,5 +1,5 @@
 # If not running interactively, don't do anything
-#[[ $- != *i* ]] && return
+[[ $- != *i* ]] && return
 
 alias ls="ls -AGlhv --time-style=+'|' --color=auto"
 alias v="nvim"

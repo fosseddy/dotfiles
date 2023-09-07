@@ -1,4 +1,5 @@
 export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/lib/go/bin:$PATH
 
 export XINITRC=$HOME/.config/xorg/xinitrc
 export XAUTHORITY=$HOME/.local/state/xorg/Xauthority

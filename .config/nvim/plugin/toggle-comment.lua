@@ -24,7 +24,7 @@ local filetypes = {
     html       = create_type([[\<\!--]], [[--\>]]),
     css        = create_type([[/\*]], [[\*/]]),
     lua        = create_type("--", ""),
-    vim        = create_type([[\"]], ""),
+    vim        = create_type([[\"]], "")
 }
 
 local get_lang = function()

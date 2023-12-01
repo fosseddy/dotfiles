@@ -151,9 +151,5 @@ hi("Special",    {"fg"})
 
 link("Todo", "Comment")
 
--- NERDTree
-hi("NERDTreeExecFile", {green.term})
-hi("NERDTreeLinkFile", {cyan.term})
-
 -- Telescope
 link("TelescopeMatching", "IncSearch")

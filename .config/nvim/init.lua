@@ -1,7 +1,6 @@
 local packer = require("packer")
 packer.startup(function(use)
     use("wbthomason/packer.nvim")
-    use("preservim/nerdtree")
     use({"nvim-telescope/telescope.nvim", tag = "0.1.4", requires = {{"nvim-lua/plenary.nvim"}}})
     use({"L3MON4D3/LuaSnip", tag = "v1.*"})
 end)

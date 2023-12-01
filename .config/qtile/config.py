@@ -9,7 +9,7 @@ from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
 mod = "mod4"
-terminal = "alacritty"
+terminal = "st"
 browser = "brave"
 
 keys = [
@@ -18,11 +18,8 @@ keys = [
 
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
     Key([], "XF86AudioMicMute", lazy.spawn("amixer set Capture toggle -q")),
-    Key([], "XF86AudioRaiseVolume",
-        lazy.spawn("amixer sset Master 5+ unmute -q")),
-
-    Key([], "XF86AudioLowerVolume",
-        lazy.spawn("amixer sset Master 5- unmute -q")),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer sset Master 5+ unmute -q")),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer sset Master 5- unmute -q")),
 
     Key([], "XF86MonBrightnessUp", lazy.spawn("backlight-control inc")),
     Key([], "XF86MonBrightnessDown", lazy.spawn("backlight-control dec")),
@@ -64,12 +61,8 @@ keys = [
 
 # Drag floating layouts.
 mouse = [
-    Drag([mod], "Button1", lazy.window.set_position_floating(),
-         start=lazy.window.get_position()),
-
-    Drag([mod], "Button3", lazy.window.set_size_floating(),
-         start=lazy.window.get_size()),
-
+    Drag([mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
+    Drag([mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()),
     Click([mod], "Button2", lazy.window.bring_to_front())
 ]
 
@@ -81,8 +74,7 @@ for i in groups:
         Key([mod], i.name, lazy.group[i.name].toscreen()),
 
         # switch to & move focused window to group i
-        Key([mod, "shift"], i.name,
-            lazy.window.togroup(i.name, switch_group=True)),
+        Key([mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True)),
     ])
 
 theme = dict(

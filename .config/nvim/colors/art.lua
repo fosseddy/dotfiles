@@ -157,7 +157,3 @@ hi("NERDTreeLinkFile", {cyan.term})
 
 -- Telescope
 link("TelescopeMatching", "IncSearch")
-
--- HTML
-vim.g.html_no_rendering = 1
-vim.g.html_wrong_comments = 1

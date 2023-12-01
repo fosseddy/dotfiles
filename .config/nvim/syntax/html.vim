@@ -24,8 +24,8 @@ syn region html_string start=+"+ end=+"+ contained
 syn region html_string start="'" end="'" contained
 syn region html_comment start="<!--" end="--\s*>"
 syn region html_comment start="<!DOCTYPE" end=">" keepend
-syn region tag_css start="<style\>\_[^>]*>" end="</style>" contains=@syntax_css keepend
-syn region tag_script start="<script\>\_[^>]*>" end="</script\_[^>]*>" contains=@syntax_js keepend
+syn region html_tag_css start="<style\>\_[^>]*>" end="</style>" contains=@syntax_css keepend
+syn region html_tag_script start="<script\>\_[^>]*>" end="</script\_[^>]*>" contains=@syntax_js keepend
 
 hi def link html_comment Comment
 hi def link html_string String

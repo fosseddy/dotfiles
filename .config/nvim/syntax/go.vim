@@ -9,9 +9,7 @@ syn sync minlines=500
 
 syn match go_comment "\/\/.*"
 syn region go_comment start="/\*" end="\*/"
-syn region go_string start=+"+ skip=+\\"+ end=+"+
-syn region go_string start="`" skip="\\`" end="`"
-syn region go_string start="'" skip="\\'" end="'"
+syn region go_string start=+\z(['"`]\)+ skip="\\\z1" end="\z1"
 
 hi def link go_comment Comment
 hi def link go_string String

@@ -1,7 +1,8 @@
+if exists("b:current_syntax")
+    finish
+endif
+
 if !exists("main_syntax")
-    if exists("b:current_syntax")
-        finish
-    endif
     let main_syntax = "html"
 endif
 
@@ -20,8 +21,7 @@ syn include @syntax_js syntax/javascript.vim
 unlet b:current_syntax
 
 syn region html_tag start="<[^/]" end=">" contains=html_string
-syn region html_string start=+"+ end=+"+ contained
-syn region html_string start="'" end="'" contained
+syn region html_string start=+\z(['"]\)+ skip="\\\z1" end="\z1" contained
 syn region html_comment start="<!--" end="--\s*>"
 syn region html_comment start="<!DOCTYPE" end=">" keepend
 syn region html_tag_css start="<style\>\_[^>]*>" end="</style>" contains=@syntax_css keepend

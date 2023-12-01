@@ -1,10 +1,9 @@
-if !exists("main_syntax")
-    if exists("b:current_syntax")
-        finish
-    endif
-    let main_syntax = "css"
-elseif exists("b:current_syntax") && b:current_syntax == "css"
+if exists("b:current_syntax")
     finish
+endif
+
+if !exists("main_syntax")
+    let main_syntax = "css"
 endif
 
 let s:cpo_save = &cpo
@@ -17,8 +16,7 @@ if main_syntax == "css"
 endif
 
 syn region css_comment start="/\*" end="\*/"
-syn region css_string start=+"+ skip=+\\"+ end=+"+
-syn region css_string start="'" skip="\\'" end="'"
+syn region css_string start=+\z(['"]\)+ skip="\\\z1" end="\z1"
 
 hi def link css_comment Comment
 hi def link css_string String

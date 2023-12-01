@@ -9,8 +9,7 @@ syn sync minlines=500
 
 syn match c_comment "\/\/.*"
 syn region c_comment start="/\*" end="\*/"
-syn region c_string start=+"+ skip=+\\"+ end=+"+
-syn region c_string start="'" skip="\\'" end="'"
+syn region c_string start=+\z(['"]\)+ skip="\\\z1" end="\z1"
 syn match c_string display contained "<[^>]*>"
 syn match c_include display "^\s*\zs\%(%:\|#\)\s*include\>\s*<" contains=c_string
 

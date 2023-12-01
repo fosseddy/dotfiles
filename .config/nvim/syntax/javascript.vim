@@ -1,10 +1,9 @@
-if !exists("main_syntax")
-    if exists("b:current_syntax")
-        finish
-    endif
-    let main_syntax = "javascript"
-elseif exists("b:current_syntax") && b:current_syntax == "javascript"
+if exists("b:current_syntax")
     finish
+endif
+
+if !exists("main_syntax")
+    let main_syntax = "javascript"
 endif
 
 let s:cpo_save = &cpo
@@ -16,9 +15,7 @@ endif
 
 syn match js_comment "\/\/.*"
 syn region js_comment start="/\*" end="\*/"
-syn region js_string start=+"+ skip=+\\"+ end=+"+
-syn region js_string start="'" skip="\\'" end="'"
-syn region js_string start="`" skip="\\`" end="`"
+syn region js_string start=+\z(['"`]\)+ skip="\\\z1" end="\z1"
 
 hi def link js_comment Comment
 hi def link js_string String

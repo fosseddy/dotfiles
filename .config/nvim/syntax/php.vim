@@ -8,6 +8,7 @@ set cpo&vim
 syn sync minlines=500
 
 runtime! syntax/html.vim
+unlet b:current_syntax
 
 syn region php_region start="<?\(php\|=\)" end="?>" contains=php_comment,php_string keepend
 syn match php_comment "\/\/.*" contained

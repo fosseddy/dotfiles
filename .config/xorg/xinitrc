@@ -58,7 +58,6 @@ while true; do
     ram_usage=$(free -m | awk 'FNR==2{print $2-($4+$6)}')M
     wifi_name=$(nmcli device | awk 'FNR==2{if($1!="wlp1s0"){print "off"}else{print $4}}')
 
-
     xsetroot -name " CPU: $cpu_usage | RAM: $ram_usage | Wi-Fi: $wifi_name | $(date +'%a %d %b %R')"
     sleep 1
 done &

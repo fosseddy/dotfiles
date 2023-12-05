@@ -1,6 +1,6 @@
 vim.api.nvim_create_autocmd("Syntax", {
     pattern = "*",
-    command = "syn match _Shebang /#!.*/"
+    command = "syn match global_shebang /#!.*/"
 })
 
-vim.cmd.highlight({"def", "link", "_Shebang", "Comment"})
+vim.cmd.highlight({"def", "link", "global_shebang", "Comment"})

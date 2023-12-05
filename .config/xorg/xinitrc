@@ -24,24 +24,42 @@ fi
 
 # start some nice programs
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
- for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
-  [ -x "$f" ] && . "$f"
- done
- unset f
+    for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+        [ -x "$f" ] && . "$f"
+    done
+    unset f
 fi
 
 xrandr --output eDP --set "TearFree" on
 xrandr --output eDP --set "scaling mode" "Full aspect"
 
-xinput set-prop 'ELAN2602:00 04F3:3109 Touchpad' 'libinput Tapping Enabled' 1
-xinput set-prop 'ELAN2602:00 04F3:3109 Touchpad' 'libinput Natural Scrolling Enabled' 1
+xinput set-prop "ELAN2602:00 04F3:3109 Touchpad" "libinput Tapping Enabled" 1
+xinput set-prop "ELAN2602:00 04F3:3109 Touchpad" "libinput Natural Scrolling Enabled" 1
 
-xinput set-prop 'Logitech USB Optical Mouse' 'libinput Natural Scrolling Enabled' 1
-xinput set-prop 'Logitech USB Optical Mouse' 'libinput Accel Speed' -0.4
+xinput set-prop "Logitech USB Optical Mouse" "libinput Natural Scrolling Enabled" 1
+xinput set-prop "Logitech USB Optical Mouse" "libinput Accel Speed" -0.4
 
 setxkbmap -option caps:escape
 setxkbmap -model pc104 -layout us,ru -option grp:rctrl_rshift_toggle
 
 xset r rate 200 50
 
-exec qtile start
+while true; do
+    nitrogen --set-zoom --random $HOME/.local/share/wallpapers
+    sleep 15m
+done &
+
+prev_cpu_info="0 0"
+while true; do
+    cpu_info=$(grep 'cpu ' /proc/stat)
+    cpu_usage=$(echo -e "$prev_cpu_info\n$cpu_info" | awk '{u=$2+$4;t=$2+$4+$5;if(NR==1){u1=u;t1=t}else{printf "%.1f%%",(u-u1)*100/(t-t1)}}')
+    prev_cpu_info=$cpu_info
+
+    ram_usage=$(free -m | awk 'FNR==2{print $2-($4+$6)}')M
+    wifi_name=$(echo $(iwgetid -r) | awk '{if($1){print $1}else{print "off"}}')
+
+    xsetroot -name " CPU: $cpu_usage | RAM: $ram_usage | Wi-Fi: $wifi_name | $(date +'%a %d %b %R')"
+    sleep 1
+done &
+
+exec dwm

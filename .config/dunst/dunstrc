@@ -30,9 +30,9 @@
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
 
-    width = (0, 2000)
+    width = (80, 1000)
     # height = (5, 1000)
-    offset = 0x25
+    offset = 0x17
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -142,7 +142,7 @@
     # Show age of message if message is older than show_age_threshold
     # seconds.
     # Set to -1 to disable.
-    show_age_threshold = 60
+    show_age_threshold = -1
 
     # Split notifications into multiple lines if they don't fit into
     # geometry.
@@ -304,7 +304,7 @@
 [urgency_normal]
     background = "#000000"
     foreground = "#ffffff"
-    timeout = 10
+    timeout = 0
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
 

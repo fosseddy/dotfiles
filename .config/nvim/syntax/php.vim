@@ -5,7 +5,7 @@ endif
 let s:keepcpo = &cpo
 set cpo&vim
 
-syn sync minlines=500
+syn sync fromstart
 
 runtime! syntax/html.vim
 unlet b:current_syntax

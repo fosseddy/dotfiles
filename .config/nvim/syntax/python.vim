@@ -5,7 +5,7 @@ endif
 let s:cpo_save = &cpo
 set cpo&vim
 
-syn sync minlines=500
+syn sync fromstart
 
 syn match python_comment "#.*"
 syn region python_string start=+\z(['"]\)+ skip="\\\z1" end="\z1"

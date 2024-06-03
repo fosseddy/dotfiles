@@ -5,7 +5,7 @@ endif
 let s:cpo_save = &cpo
 set cpo&vim
 
-syn sync minlines=500
+syn sync fromstart
 
 syn match lua_comment "--.*"
 syn region lua_comment start="--\[\[" end="\]\]"

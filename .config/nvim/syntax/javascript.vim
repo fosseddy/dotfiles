@@ -10,7 +10,7 @@ let s:cpo_save = &cpo
 set cpo&vim
 
 if main_syntax == "javascript"
-    syn sync minlines=500
+    syn sync fromstart
 endif
 
 syn match js_comment "\/\/.*"

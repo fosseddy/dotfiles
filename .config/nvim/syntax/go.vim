@@ -5,7 +5,7 @@ endif
 let s:keepcpo = &cpo
 set cpo&vim
 
-syn sync minlines=500
+syn sync fromstart
 
 syn match go_comment "\/\/.*"
 syn region go_comment start="/\*" end="\*/"

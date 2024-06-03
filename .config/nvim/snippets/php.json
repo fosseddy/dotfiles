@@ -1,0 +1,11 @@
+{
+    "php": {
+        "prefix": "php",
+        "body": [
+            "<?php",
+            "declare(strict_types = 1);",
+            "",
+            "?>"
+        ]
+    }
+}

@@ -12,7 +12,7 @@ set cpo&vim
 syn case ignore
 
 if main_syntax == "css"
-    syn sync minlines=500
+    syn sync fromstart
 endif
 
 syn region css_comment start="/\*" end="\*/"

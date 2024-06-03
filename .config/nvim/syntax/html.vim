@@ -12,7 +12,7 @@ set cpo&vim
 syn case ignore
 
 if main_syntax == "html"
-    syn sync minlines=500
+    syn sync fromstart
 endif
 
 syn include @syntax_css syntax/css.vim

@@ -1,3 +1,8 @@
+if vim.g.plugin_toggle_comment == 1 then
+    return
+end
+vim.g.plugin_toggle_comment = 1
+
 local cmd = "~/.local/lib/vimcmd-toggle-comment"
 
 local create_type = function(prefix, suffix)

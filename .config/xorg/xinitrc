@@ -37,4 +37,4 @@ done &
 
 source $HOME/.config/xorg/setup.sh
 
-exec qtile start
+exec i3

@@ -27,8 +27,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q sset Master 5- unmut
 bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id amixer -q set Capture toggle && $refresh_i3status
 
-bindsym XF86MonBrightnessUp exec --no-startup-id backlight-control inc
-bindsym XF86MonBrightnessDown exec --no-startup-id backlight-control dec
+bindsym XF86MonBrightnessUp exec --no-startup-id backlight-control-notify inc
+bindsym XF86MonBrightnessDown exec --no-startup-id backlight-control-notify dec
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
